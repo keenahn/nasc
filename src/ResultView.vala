@@ -56,12 +56,12 @@ public class ResultView : Gtk.Box {
         font_desc.set_size (12 * Pango.SCALE);
         text_view.override_font (font_desc);
         /* background color very light grey */
-        var color = Gdk.RGBA ();
-        color.red = 0.9;
-        color.green = 0.9;
-        color.blue = 0.9;
-        color.alpha = 1.0;
-        text_view.override_background_color (Gtk.StateFlags.NORMAL, color);
+        // var color = Gdk.RGBA ();
+        // color.red = 0.9;
+        // color.green = 0.9;
+        // color.blue = 0.9;
+        // color.alpha = 1.0;
+        // text_view.override_background_color (Gtk.StateFlags.NORMAL, color);
         /* listen on result press */
         text_view.set_events (Gdk.EventMask.BUTTON_PRESS_MASK);
         text_view.button_press_event.connect ((evt) => {
@@ -114,7 +114,7 @@ public class ResultView : Gtk.Box {
         var alignment = new Gtk.Alignment (0, 0, 1, 1);
         alignment.top_padding = Nasc.top_padding;
         alignment.add (text_view);
-        this.override_background_color (Gtk.StateFlags.NORMAL, color);
+        // this.override_background_color (Gtk.StateFlags.NORMAL, color);
         this.pack_start (alignment);
         this.pack_start (spinner_box);
     }
